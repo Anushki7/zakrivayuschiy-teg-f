@@ -388,9 +388,6 @@
 
       </article>
 
-    </main>
-
-    <footer class="footer">
       <button type="button" class="button button_floppy" onclick="window['floppy-dialog'].showModal()" aria-controls="floppy-dialog"> 
         <svg class="floppy">
           <use href="./svg/floppy.svg#floppy"></use> 
@@ -398,20 +395,21 @@
         <span class="button__text">Сохранить на память</span>
       </button>
 
-      <dialog class="popup" id="floppy-dialog"> <!-- модальное окно  -->
+      <dialog class="popup" id="floppy-dialog"> <!-- модальное окно  --> 
         <div class="without__button">
           <svg class="floppy">
             <use href="./svg/floppy.svg#floppy"></use> 
           </svg>
           <p class="popup__text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <form>
-          <button class="button" type="button" onclick="window['popup'].close()"> <!-- ok_button? class -->
-            <span class="button__text">Ok</span>
+        <form method="dialog">
+          <button class="button button__ok" type="submit"> 
+            <span class="button__text">OK</span>
           </button>
         </form>
       </dialog>
-    </footer>
+
+    </main>
 
     <script src="./scripts/like.js"></script>
   </body>
