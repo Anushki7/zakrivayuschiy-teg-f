@@ -82,6 +82,7 @@
   text-transform: uppercase;
   border: transparent;
   padding: 0;
+  transition: color 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -100,13 +101,11 @@
 .theme-menu__button:hover {
   cursor: pointer;
   color: var(--hover-color);
-  transition: color 0.3s ease;
 }
 
 .theme-menu__button:focus {
   outline: none;
   color: var(--hover-color);
-  transition: color 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -234,6 +233,7 @@
 .card__icon-button {
   background-color: transparent;
   border: none;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -242,26 +242,26 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-  transition: border 0.3s ease;
 }
 
 .button {
   width: 130px;
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button {
-  position: relative;
   padding: 0;
-  overflow: hidden;
 }
 
-.card__like-button:hover {
+.button:hover {
   cursor: pointer;
 }
 
-.card__like-button::before {
+.button::before {
   content: '';
   position: absolute;
   display: block;
@@ -274,14 +274,13 @@
   z-index: 0;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   transform: translateX(0);
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
@@ -303,30 +302,7 @@
   text-align: start;
   gap: 8px;
   white-space: nowrap;
-  position: relative;
-  overflow: hidden;
   margin-block-end: clamp(6.25rem, 6.14rem + 0.4695vw, 6.5625rem);
-}
-
-.button_floppy:hover {
-  cursor: pointer;
-}
-
-.button_floppy::before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transform: translateX(-1000%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 0;
-}
-
-.button_floppy:hover::before {
-  transform: translateX(0);
 }
 
 .floppy {
@@ -374,6 +350,7 @@
 .button__ok {
   width: 257px;
   height: 38px;
+  padding: 0;
 }
 
 
